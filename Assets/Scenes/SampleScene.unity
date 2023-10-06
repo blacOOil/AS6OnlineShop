@@ -1299,7 +1299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemTextUi: {fileID: 793683074}
-  itemorderCode: {fileID: 272057311}
   Items:
   - Icon: {fileID: -1940859256, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Blue Book
@@ -1372,43 +1371,43 @@ MonoBehaviour:
     ItemInfo: Fruity
     Price: 20
     type: 2
-    order: 12
+    order: 10
   - Icon: {fileID: 1185358660, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Red Grape
     ItemInfo: Fruity
     Price: 30
     type: 2
-    order: 13
+    order: 10
   - Icon: {fileID: 226255641, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Purple book
     ItemInfo: just a book
     Price: 70
     type: 0
-    order: 14
+    order: 10
   - Icon: {fileID: 562403413, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Shield
     ItemInfo: just a shield
     Price: 200
     type: 0
-    order: 15
+    order: 10
   - Icon: {fileID: -351935353, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Sword
     ItemInfo: just a sword
     Price: 150
     type: 0
-    order: 16
+    order: 10
   - Icon: {fileID: 1064835927, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Dual-Sword
     ItemInfo: just a sword
     Price: 400
     type: 0
-    order: 17
+    order: 10
   - Icon: {fileID: -1122453776, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: lance
     ItemInfo: just a lance
     Price: 300
     type: 0
-    order: 18
+    order: 10
   inventory: {fileID: 0}
   ItemContent: {fileID: 398812076}
   ShopItemPrefab: {fileID: 794797987}
@@ -1427,7 +1426,6 @@ MonoBehaviour:
   ItemTextName: {fileID: 916463026}
   ItemTextInfo: {fileID: 491767800}
   ItemPrice: {fileID: 1216891658}
-  ItemOrderText: {fileID: 272057311}
   image: {fileID: 1348297992}
   ItemInfoContent: {fileID: 1662485820}
   ItemInfoPrefab: {fileID: 7807070209738874044}
@@ -1594,17 +1592,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247482207}
   m_CullTransparentMesh: 1
---- !u!114 &272057311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5824775225668145353, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-  m_PrefabInstance: {fileID: 1072442442}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &273421915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &340506669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,9 +2288,9 @@ RectTransform:
   m_Father: {fileID: 369047992}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -702.5}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &491893704
@@ -2519,9 +2506,9 @@ RectTransform:
   m_Father: {fileID: 369047992}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -617.5}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527518112
@@ -3175,121 +3162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8003c3c526a4643a16edf478e30527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopItem:
-  - Icon: {fileID: -1940859256, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Blue Book
-    ItemInfo: book
-    Price: 122
-    type: 0
-    order: 
-  - Icon: {fileID: -1172587905, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Golden Chest
-    ItemInfo: golden chest
-    Price: 400
-    type: 2
-    order: 
-  - Icon: {fileID: -201948882, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Potion
-    ItemInfo: Heal
-    Price: 45
-    type: 1
-    order: 
-  - Icon: {fileID: -1015555760, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Green Gem
-    ItemInfo: to upgrade character
-    Price: 75
-    type: 3
-    order: 
-  - Icon: {fileID: 1774025196, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Two-Handed Axe
-    ItemInfo: Weaponnnnnnn
-    Price: 775
-    type: 0
-    order: 
-  - Icon: {fileID: -1407862177, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Green Book
-    ItemInfo: book
-    Price: 58
-    type: 0
-    order: 
-  - Icon: {fileID: 1670203979, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Black Potion
-    ItemInfo: Heal
-    Price: 56
-    type: 1
-    order: 
-  - Icon: {fileID: 303135804, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Big Red Gem
-    ItemInfo: to upgrade ...
-    Price: 78
-    type: 3
-    order: 
-  - Icon: {fileID: 1725580441, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Blue Star
-    ItemInfo: to upgrade Character
-    Price: 46
-    type: 4
-    order: 
-  - Icon: {fileID: -598320734, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Purple Star
-    ItemInfo: to upgrade Character
-    Price: 52
-    type: 4
-    order: 
-  - Icon: {fileID: -904079810, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Gold Grape
-    ItemInfo: Fruity
-    Price: 15
-    type: 2
-    order: 
-  - Icon: {fileID: 1564714037, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Purple Grape
-    ItemInfo: Fruity
-    Price: 20
-    type: 2
-    order: 
-  - Icon: {fileID: 1185358660, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Red Grape
-    ItemInfo: Fruity
-    Price: 30
-    type: 2
-    order: 
-  - Icon: {fileID: 226255641, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Purple book
-    ItemInfo: just a book
-    Price: 70
-    type: 0
-    order: 
-  - Icon: {fileID: 562403413, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Shield
-    ItemInfo: just a shield
-    Price: 200
-    type: 0
-    order: 
-  - Icon: {fileID: -351935353, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Sword
-    ItemInfo: just a sword
-    Price: 150
-    type: 0
-    order: 
-  - Icon: {fileID: 1064835927, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Dual-Sword
-    ItemInfo: just a sword
-    Price: 400
-    type: 0
-    order: 
-  - Icon: {fileID: -1122453776, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: lance
-    ItemInfo: just a lance
-    Price: 300
-    type: 0
-    order: 
-  - Icon: {fileID: 1866288088, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Ring magic
-    ItemInfo: just a ring
-    Price: 1000
-    type: 0
-    order: 
+  shopItem: []
   Gem: 1000
   GemTXT: {fileID: 1634946142}
 --- !u!114 &692384120
@@ -3320,7 +3193,6 @@ MonoBehaviour:
   ItemTextName: {fileID: 174922794}
   ItemTextInfo: {fileID: 1548249884}
   ItemPrice: {fileID: 1826565800}
-  ItemOrderText: {fileID: 0}
   image: {fileID: 33105690}
   ItemInfoContent: {fileID: 1614603414}
   ItemInfoPrefab: {fileID: 24126740}
@@ -3337,7 +3209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemTextUi: {fileID: 97931236}
-  itemorderCode: {fileID: 0}
   Items:
   - Icon: {fileID: -1940859256, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Blue Book
@@ -3410,49 +3281,49 @@ MonoBehaviour:
     ItemInfo: Fruity
     Price: 20
     type: 2
-    order: 11
+    order: 10
   - Icon: {fileID: 1185358660, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Red Grape
     ItemInfo: Fruity
     Price: 30
     type: 2
-    order: 12
+    order: 10
   - Icon: {fileID: 226255641, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Purple book
     ItemInfo: just a book
     Price: 70
     type: 0
-    order: 13
+    order: 10
   - Icon: {fileID: 562403413, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Shield
     ItemInfo: just a shield
     Price: 200
     type: 0
-    order: 14
+    order: 10
   - Icon: {fileID: -351935353, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Sword
     ItemInfo: just a sword
     Price: 150
     type: 0
-    order: 15
+    order: 10
   - Icon: {fileID: 1064835927, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Dual-Sword
     ItemInfo: just a sword
     Price: 400
     type: 0
-    order: 16
+    order: 10
   - Icon: {fileID: -1122453776, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: lance
     ItemInfo: just a lance
     Price: 300
     type: 0
-    order: 17
+    order: 10
   - Icon: {fileID: 1866288088, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
     ItemName: Ring magic
     ItemInfo: just a ring
     Price: 1000
     type: 0
-    order: 18
+    order: 10
   inventory: {fileID: 0}
   ItemContent: {fileID: 416544984}
   ShopItemPrefab: {fileID: 1570281949}
@@ -3718,9 +3589,9 @@ RectTransform:
   m_Father: {fileID: 369047992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -362.5}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905452779
@@ -3846,7 +3717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &931851121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4373,26 +4244,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 232313312}
     m_Modifications:
-    - target: {fileID: 1570387589394919718, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.40054345
-      objectReference: {fileID: 0}
-    - target: {fileID: 1570387589394919718, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.40054345
-      objectReference: {fileID: 0}
-    - target: {fileID: 1570387589394919718, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.40054345
-      objectReference: {fileID: 0}
-    - target: {fileID: 1570387589394919718, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 187.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1570387589394919718, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -86.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2035407948612884440, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4481,50 +4332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item
       objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884441, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7807070209738874045}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 232313314}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: StartPresentInfo
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Inventory.ItemPresenter.ItemInfoPresenter, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035407948612884447, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5824775225668145353, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
-      propertyPath: m_margin.x
-      value: -251.69904
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c9dfe6336a59f441b4178f0f9af46e8, type: 3}
 --- !u!1 &1087152548
@@ -4710,9 +4521,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1118411146
 MonoBehaviour:
@@ -5564,9 +5375,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1469680217
 MonoBehaviour:
@@ -5865,8 +5676,8 @@ RectTransform:
   m_Father: {fileID: 1740560834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5985248}
+  m_AnchorMax: {x: 1, y: 0.99999994}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7045,9 +6856,9 @@ RectTransform:
   m_Father: {fileID: 369047992}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -532.5}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684843344
@@ -7801,8 +7612,8 @@ RectTransform:
   m_Father: {fileID: 1768471789}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.55022395}
-  m_AnchorMax: {x: 1, y: 0.99999905}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8677,9 +8488,9 @@ RectTransform:
   m_Father: {fileID: 369047992}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -447.5}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120964200
@@ -8801,19 +8612,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3964755130685297770, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3964755130685297770, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3964755130685297770, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 263.75
       objectReference: {fileID: 0}
     - target: {fileID: 3964755130685297770, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -367.2354
       objectReference: {fileID: 0}
     - target: {fileID: 3972736631285621891, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -8937,19 +8748,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9209714255040875503, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9209714255040875503, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9209714255040875503, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 536.25
       objectReference: {fileID: 0}
     - target: {fileID: 9209714255040875503, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -367.2354
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}

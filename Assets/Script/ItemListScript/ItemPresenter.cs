@@ -15,8 +15,6 @@ namespace Inventory.ItemPresenter
         int maxShownItemCount;
         /////////////////////////////////////////////
         public TextMeshProUGUI ItemTextUi;
-        public TextMeshProUGUI itemorderCode;
-
 
         [SerializeField] public List<Item> Items = new List<Item>();
         [SerializeField] ItemArray inventory;
@@ -94,8 +92,6 @@ namespace Inventory.ItemPresenter
                     itemUi.transform.Find("Image").GetComponent<Image>().sprite = item.Icon;
                     TextMeshProUGUI itemTextUi = itemUi.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
                     itemTextUi.text = item.ItemName;
-                    TextMeshProUGUI itemorderCode = itemUi.transform.Find("order").GetComponent<TextMeshProUGUI>();
-                    itemorderCode.text = item.order;
                 }
             }
         }

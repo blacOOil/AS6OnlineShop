@@ -39,7 +39,7 @@ namespace Inventory.ItemPresenter
         public string ItemInfo;
         public float Price;
         public ItemType type;
-        public string order;
+        public int order;
      
     }
     public enum ItemType

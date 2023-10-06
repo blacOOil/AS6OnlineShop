@@ -12,9 +12,9 @@ namespace Inventory.ItemPresenter
 
     public class ItemInfoPresenter : MonoBehaviour
     {
-        public TextMeshProUGUI ItemTextName,ItemTextInfo,ItemPrice,ItemOrderText;
+        public TextMeshProUGUI ItemTextName,ItemTextInfo,ItemPrice;
         public Image image;
-        
+
         //public static ItemInfoPresenter Instance;
         //public List<Item> Items = new List<Item>();
         // [SerializeField] public Text UItext;
@@ -27,22 +27,22 @@ namespace Inventory.ItemPresenter
       
         public void Start()
         {
-
             //ListItemInfo();
-          //  List<Item> items = FindObjectOfType<ItemPresenter>().Items;
-           // Debug.Log("Number of items in the list: " + items.Count);
-            //ListItemInfo(items);
+            List<Item> items = FindObjectOfType<ItemPresenter>().Items;
+            Debug.Log("Number of items in the list: " + items.Count);
+            ListItemInfo(items);
         }
         private void Awake()
         {
 
         }
 
-        public void ListItemInfo(List<Item> items, int ItemOrder)
+        public void ListItemInfo(List<Item> items)
         {
 
             if (items.Count > 0)
             {
+                int ItemOrder = 0;
                 var item = items[ItemOrder];
                 GameObject itemUi = Instantiate(ItemInfoPrefab, ItemInfoContent);
              
@@ -65,13 +65,6 @@ namespace Inventory.ItemPresenter
 
             }
 
-        }
-        public void StartPresentInfo(int itemOrder)
-        {
-            
-            List<Item> items = FindObjectOfType<ItemPresenter>().Items;
-            Debug.Log("Number of items in the list: " + items.Count);
-            ListItemInfo(items,itemOrder);
         }
 
     }
