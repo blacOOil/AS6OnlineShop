@@ -1,0 +1,197 @@
+[
+    {
+      "ItemName":"Grape Golden",
+      "ItemInfo":"A grape..",
+      "type":2
+    },
+    {
+      "ItemName":"Grape Purple",
+      "ItemInfo":"A grape..",
+      "type":2
+    },
+    {
+      "ItemName":"Grape Blue",
+      "ItemInfo":"A grape..",
+      "type":2
+    },
+    {
+      "ItemName":"Grape Red",
+      "ItemInfo":"A grape..",
+      "type":2
+    },
+    {
+      "ItemName":"Blue Book",
+      "ItemInfo":"a little book",
+      "type":0
+    },
+    {
+      "ItemName":"Purple Book",
+      "ItemInfo":"a big book",
+      "type":0
+    },
+    {
+      "ItemName":"Red Book",
+      "ItemInfo":"a huge book",
+      "type":0
+    },
+    {
+      "ItemName":"Green Book",
+      "ItemInfo":"a fucking book",
+      "type":0
+    },
+    {
+      "ItemName":"Green Card",
+      "ItemInfo":"EXP Card",
+      "type":2
+    },
+    {
+      "ItemName":"Red Card",
+      "ItemInfo":"HP Card",
+      "type":2
+    },
+    {
+      "ItemName":"Orange Card",
+      "ItemInfo":"Speed Card",
+      "type":2
+    },
+    {
+      "ItemName":"Blue Card",
+      "ItemInfo":"Mana Card",
+      "type":2
+    },
+    {
+      "ItemName":"Purple Cloak",
+      "ItemInfo":"a Cloak",
+      "type":0
+    },
+    {
+      "ItemName":"Red Cloak",
+      "ItemInfo":"a Cloak",
+      "type":0
+    },
+    {
+      "ItemName":"Yellow Cloak",
+      "ItemInfo":"a Cloak",
+      "type":0
+    },
+    {
+      "ItemName":"Green Cloak",
+      "ItemInfo":"a Cloak",
+      "type":0
+    },
+    {
+      "ItemName":"Golden Chest",
+      "ItemInfo":"Gold",
+      "type":2
+    },
+    {
+      "ItemName":"Silver Chest",
+      "ItemInfo":"Medium",
+      "type":2
+    },
+    {
+      "ItemName":"Emerald Chest",
+      "ItemInfo":"Exp",
+      "type":2
+    },
+    {
+      "ItemName":"Bronze Chest",
+      "ItemInfo":"....",
+      "type":2
+    },
+    {
+      "ItemName":"Blue Star",
+      "ItemInfo":"Character star",
+      "type":4
+    },
+    {
+      "ItemName":"Green Star",
+      "ItemInfo":"Character star",
+      "type":4
+    },
+    {
+      "ItemName":"Purple Star",
+      "ItemInfo":"Character star",
+      "type":4
+    },
+    {
+      "ItemName":"Red Star",
+      "ItemInfo":"Character star",
+      "type":4
+    },
+    {
+      "ItemName":"Blue Gem",
+      "ItemInfo":"Mana Regen",
+      "type":3
+    },
+    {
+      "ItemName":"Red Gem",
+      "ItemInfo":"HP",
+      "type":3
+    },
+    {
+      "ItemName":"Green Gem",
+      "ItemInfo":"Exp boost",
+      "type":3
+    },
+    {
+      "ItemName":"Yellow Gem",
+      "ItemInfo":"Speed boost",
+      "type":3
+    },
+    {
+      "ItemName":"Green Potion",
+      "ItemInfo":"Potion",
+      "type":1
+    },
+    {
+      "ItemName":"Red Potion",
+      "ItemInfo":"Potion",
+      "type":1
+    },
+    {
+      "ItemName":"Blue Potion",
+      "ItemInfo":"Potion",
+      "type":1
+    },
+    {
+      "ItemName":"Gray Potion",
+      "ItemInfo":"Potion",
+      "type":1
+    },
+    {
+      "ItemName":"Sword",
+      "ItemInfo":"a equipment",
+      "type":0
+    },
+    {
+      "ItemName":"Lance",
+      "ItemInfo":"a equipment",
+      "type":0
+    },
+    {
+      "ItemName":"Duo-dagger",
+      "ItemInfo":"a equipment",
+      "type":0
+    },
+    {
+      "ItemName":"2-Handed axe",
+      "ItemInfo":"a equipment",
+      "type":0
+    },
+    {
+      "ItemName":"Wand",
+      "ItemInfo":"a equipment",
+      "type":0
+    },
+    {
+      "ItemName":"Shield",
+      "ItemInfo":"a equipment",
+      "type":0
+    },
+    {
+      "ItemName":"Ring",
+      "ItemInfo":"a equipment",
+      "type":0
+    }
+  ]
