@@ -24,7 +24,7 @@ public class SwitchUIBotton : MonoBehaviour
         NewCanvasUI.SetActive(true);
         OldCanvasUI.SetActive(false);
         NewCanvasUiActive = true;
-        Debug.Log("ItemInfo Pop-up");
+        //Debug.Log("ItemInfo Pop-up");
     }
 
     public void CanvasUISwitchOld() {

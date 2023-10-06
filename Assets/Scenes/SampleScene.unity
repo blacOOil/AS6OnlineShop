@@ -606,7 +606,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570281950}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1298,6 +1298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b572383bf7539e6449c5358b66aeacfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userinfo: 
+  loadinfo: 
   ItemTextUi: {fileID: 793683074}
   Items:
   - Icon: {fileID: -1940859256, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
@@ -1408,6 +1410,7 @@ MonoBehaviour:
     Price: 300
     type: 0
     order: 10
+  itemsIconJson: []
   inventory: {fileID: 0}
   ItemContent: {fileID: 398812076}
   ShopItemPrefab: {fileID: 794797987}
@@ -1441,7 +1444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0226d857c145f6e448efe01e2982d007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Items: []
 --- !u!114 &232313316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3177,7 +3179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0226d857c145f6e448efe01e2982d007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Items: []
 --- !u!114 &692384121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,122 +3209,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b572383bf7539e6449c5358b66aeacfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userinfo: 
+  loadinfo: https://drive.google.com/uc?export=download&id=1WuT0sYBIoiXNZxOkHocwmExWC15doQkj
   ItemTextUi: {fileID: 97931236}
-  Items:
-  - Icon: {fileID: -1940859256, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Blue Book
-    ItemInfo: book
-    Price: 122
-    type: 0
-    order: 0
-  - Icon: {fileID: -1172587905, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Golden Chest
-    ItemInfo: golden chest
-    Price: 400
-    type: 2
-    order: 1
-  - Icon: {fileID: -201948882, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Potion
-    ItemInfo: Heal
-    Price: 45
-    type: 1
-    order: 2
-  - Icon: {fileID: -1015555760, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Green Gem
-    ItemInfo: to upgrade character
-    Price: 75
-    type: 3
-    order: 3
-  - Icon: {fileID: 1774025196, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Two-Handed Axe
-    ItemInfo: Weaponnnnnnn
-    Price: 775
-    type: 0
-    order: 4
-  - Icon: {fileID: -1407862177, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Green Book
-    ItemInfo: book
-    Price: 58
-    type: 0
-    order: 5
-  - Icon: {fileID: 1670203979, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Black Potion
-    ItemInfo: Heal
-    Price: 56
-    type: 1
-    order: 6
-  - Icon: {fileID: 303135804, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Big Red Gem
-    ItemInfo: to upgrade ...
-    Price: 78
-    type: 3
-    order: 7
-  - Icon: {fileID: 1725580441, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Blue Star
-    ItemInfo: to upgrade Character
-    Price: 46
-    type: 4
-    order: 8
-  - Icon: {fileID: -598320734, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Purple Star
-    ItemInfo: to upgrade Character
-    Price: 52
-    type: 4
-    order: 9
-  - Icon: {fileID: -904079810, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Gold Grape
-    ItemInfo: Fruity
-    Price: 15
-    type: 2
-    order: 10
-  - Icon: {fileID: 1564714037, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Purple Grape
-    ItemInfo: Fruity
-    Price: 20
-    type: 2
-    order: 10
-  - Icon: {fileID: 1185358660, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Red Grape
-    ItemInfo: Fruity
-    Price: 30
-    type: 2
-    order: 10
-  - Icon: {fileID: 226255641, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Purple book
-    ItemInfo: just a book
-    Price: 70
-    type: 0
-    order: 10
-  - Icon: {fileID: 562403413, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Shield
-    ItemInfo: just a shield
-    Price: 200
-    type: 0
-    order: 10
-  - Icon: {fileID: -351935353, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Sword
-    ItemInfo: just a sword
-    Price: 150
-    type: 0
-    order: 10
-  - Icon: {fileID: 1064835927, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Dual-Sword
-    ItemInfo: just a sword
-    Price: 400
-    type: 0
-    order: 10
-  - Icon: {fileID: -1122453776, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: lance
-    ItemInfo: just a lance
-    Price: 300
-    type: 0
-    order: 10
-  - Icon: {fileID: 1866288088, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
-    ItemName: Ring magic
-    ItemInfo: just a ring
-    Price: 1000
-    type: 0
-    order: 10
+  Items: []
+  itemsIconJson:
+  - icon: {fileID: -904079810, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Grape Golden
+  - icon: {fileID: 1564714037, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Grape Purple
+  - icon: {fileID: -1646965248, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Grape Blue
+  - icon: {fileID: 1185358660, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Grape Red
+  - icon: {fileID: -1940859256, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Blue Book
+  - icon: {fileID: 226255641, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Purple Book
+  - icon: {fileID: 739957342, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Red Book
+  - icon: {fileID: -1407862177, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Green Book
+  - icon: {fileID: -1508141324, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Green Card
+  - icon: {fileID: 1465393718, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Red Card
+  - icon: {fileID: -1784848827, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Orange Card
+  - icon: {fileID: -1149028892, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Blue Card
+  - icon: {fileID: -1751348267, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Purple Cloak
+  - icon: {fileID: -14473126, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Red Cloak
+  - icon: {fileID: -701382282, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Yellow Cloak
+  - icon: {fileID: -386706181, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Green Cloak
+  - icon: {fileID: -1172587905, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Golden Chest
+  - icon: {fileID: 1153811028, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Silver Chest
+  - icon: {fileID: 2019657714, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Emerald Chest
+  - icon: {fileID: -734208683, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Bronze Chest
+  - icon: {fileID: 1725580441, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Blue Star
+  - icon: {fileID: 43112096, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Green Star
+  - icon: {fileID: -1252990385, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Red Star
+  - icon: {fileID: -598320734, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Purple Star
+  - icon: {fileID: -1077627466, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Blue Gem
+  - icon: {fileID: 303135804, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Red Gem
+  - icon: {fileID: -1015555760, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Green Gem
+  - icon: {fileID: -2052319951, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Yellow Gem
+  - icon: {fileID: -177844310, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Green Potion
+  - icon: {fileID: 942342541, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Red Potion
+  - icon: {fileID: -968183729, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Blue Potion
+  - icon: {fileID: -537381022, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Gray Potion
+  - icon: {fileID: -351935353, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Sword
+  - icon: {fileID: -1122453776, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Lance
+  - icon: {fileID: 1064835927, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Duo-dagger
+  - icon: {fileID: 1774025196, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: 2-Handed axe
+  - icon: {fileID: -926812350, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Wand
+  - icon: {fileID: 562403413, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Shield
+  - icon: {fileID: 1866288088, guid: 8595f2416f1f73c4ebd8713099c87e69, type: 3}
+    itemName: Ring
   inventory: {fileID: 0}
   ItemContent: {fileID: 416544984}
   ShopItemPrefab: {fileID: 1570281949}
@@ -4798,6 +4766,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190666676}
   m_CullTransparentMesh: 1
+--- !u!1 &1199187458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199187459}
+  - component: {fileID: 1199187461}
+  - component: {fileID: 1199187460}
+  m_Layer: 5
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1199187459
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199187458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1570281950}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1199187460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199187458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.92994213, g: 0.7122642, b: 1, a: 0.20392157}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1199187461
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199187458}
+  m_CullTransparentMesh: 1
 --- !u!114 &1216891658 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 328511190094670079, guid: 52073d1966a52f24c8ec28556a5cb680, type: 3}
@@ -5864,7 +5908,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1570281950}
   - component: {fileID: 1570281954}
-  - component: {fileID: 1570281953}
   - component: {fileID: 1570281952}
   - component: {fileID: 1570281951}
   m_Layer: 5
@@ -5887,13 +5930,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 273421916}
+  - {fileID: 1199187459}
   - {fileID: 97931235}
   m_Father: {fileID: 1118411145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 391.57123, y: 253.05556}
+  m_AnchoredPosition: {x: 391.57123, y: 240}
   m_SizeDelta: {x: 179.96002, y: 201.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570281951
@@ -5948,7 +5992,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1570281953}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5964,36 +6008,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1570281953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570281949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1570281954
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,36 +1,50 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements;
 
 namespace Inventory.ItemPresenter
 {
     public class ItemArray : MonoBehaviour
     {
         
-        public Item[] Items1 => Items.ToArray();
-        [SerializeField] List<Item> Items = new List<Item>();
+        // public ItemIcon[] itemIcon => itemsIconJson.ToArray();
+        // [SerializeField] public List<ItemIcon> itemsIconJson = new List<ItemIcon>();
+
+        /// /////////////////////////////////////////////////////////////////////////////// <summary>
+
+        // public Item[] Items1 => Items.ToArray();
+        // [SerializeField] public List<Item> Items = new List<Item>();
       
 
-        public Item[] GetItemsByType(ItemType targetType)
-        {
+        // public Item[] GetItemsByType(ItemType targetType)
+        // {
 
-            var resultlist = new List<Item>();
-            foreach(var Item in Items)
-            {
-                if(Item.type == targetType)
-                {
-                    if(Item.type == targetType)
-                        resultlist.Add(Item);
+        //     var resultlist = new List<Item>();
+        //     foreach(var Item in Items)
+        //     {
+        //         if(Item.type == targetType)
+        //         {
+        //             if(Item.type == targetType)
+        //             // foreach(var ItemIcon in itemsIconJson)
+        //             // {
+        //             //     if(Item.ItemName == ItemIcon.itemName)
+        //             //     {
+        //             //     Item.Icon = ItemIcon.icon;
+        //             //     }
+        //             // }
                         
                     
-                } 
-            }
-            return resultlist.ToArray();
-        }     
+        //             resultlist.Add(Item);
+        //         } 
+        //     }
+        //     return resultlist.ToArray();
+        // }     
     }
   
-    [System.Serializable]
+    [Serializable]
     public class Item
     {
         
@@ -42,6 +56,14 @@ namespace Inventory.ItemPresenter
         public int order;
      
     }
+
+    [Serializable]
+    public class ItemIcon
+    {
+       public Sprite icon;
+       public string itemName;
+    }
+    
     public enum ItemType
     {
         Weapon,

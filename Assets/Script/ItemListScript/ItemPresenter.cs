@@ -1,8 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
+using UnityEngine.Networking;
 using TMPro;
+using System.IO;
 
 
 namespace Inventory.ItemPresenter
@@ -14,14 +19,29 @@ namespace Inventory.ItemPresenter
         int currentCategoryIndex;
         int maxShownItemCount;
         /////////////////////////////////////////////
+        
+        [Header("Online-Save")]
+        [SerializeField] string userinfo;
+        [SerializeField] string loadinfo;
+
         public TextMeshProUGUI ItemTextUi;
 
         [SerializeField] public List<Item> Items = new List<Item>();
+
+        /////////////////////////////////////////////
+        public ItemIcon[] itemIcon => itemsIconJson.ToArray();
+        [SerializeField] public List<ItemIcon> itemsIconJson = new List<ItemIcon>();
+        /////////////////////////////////////////////
         [SerializeField] ItemArray inventory;
-        [SerializeField] public Transform ItemContent;
-        [SerializeField] public GameObject ShopItemPrefab;
+        [SerializeField] Transform ItemContent;
+        [SerializeField] GameObject ShopItemPrefab;
       
-      
+
+        private void Awake()
+        {
+            LoadScoreFromGoogleDrive();
+        }
+        
         public void Start()
         {
             CategorizeItems();
@@ -29,22 +49,33 @@ namespace Inventory.ItemPresenter
             //ListItem();
         }
 
-        private void Awake()
-        {
+        // public void ListItem()
+        // {
+        //     foreach (var item in Items)
+        //     {
+        //         GameObject itemUi = Instantiate(ShopItemPrefab, ItemContent);
 
-        }
+        //         itemUi.transform.Find("Image").GetComponent<Image>().sprite = item.Icon;
+        //         ItemTextUi = itemUi.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
+        //         ItemTextUi.text = item.ItemName;
+        //     }
+        // }
 
-        public void ListItem()
-        {
-            foreach (var item in Items)
-            {
-                GameObject itemUi = Instantiate(ShopItemPrefab, ItemContent);
-
-                itemUi.transform.Find("Image").GetComponent<Image>().sprite = item.Icon;
-                ItemTextUi = itemUi.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
-                ItemTextUi.text = item.ItemName;
+        public Item[] GetItemsByType(ItemType targetType) {
+            var resultlist = new List<Item>();
+            foreach(var Item in Items) {
+                if(Item.type == targetType) {
+                    if(Item.type == targetType)
+                    foreach(var ItemIcon in itemsIconJson) {
+                        if(Item.ItemName == ItemIcon.itemName) {
+                        Item.Icon = ItemIcon.icon;
+                        }
+                    }
+                    resultlist.Add(Item);
+                } 
             }
-        }
+            return resultlist.ToArray();
+        }     
 
         public void WeaponCategory() {
             currentCategoryIndex = 0;
@@ -89,9 +120,9 @@ namespace Inventory.ItemPresenter
                 if (item.type == selectedCategory)
                 {
                     GameObject itemUi = Instantiate(ShopItemPrefab, ItemContent);
-                    itemUi.transform.Find("Image").GetComponent<Image>().sprite = item.Icon;
-                    TextMeshProUGUI itemTextUi = itemUi.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
-                    itemTextUi.text = item.ItemName;
+                    itemUi.GetComponentInChildren<Image>().sprite = item.Icon;
+                    itemUi.GetComponentInChildren<TMP_Text>().text = item.ItemName;
+                    
                 }
             }
         }
@@ -123,5 +154,59 @@ namespace Inventory.ItemPresenter
             }
         }
 
+        [ContextMenu(nameof(SaveScoreData))]
+        void SaveScoreData()
+        {
+            if (string.IsNullOrEmpty(userinfo))
+            {
+                Debug.Log("NO SAVE!");
+                return;
+            }
+
+            var scoreJson = JsonConvert.SerializeObject(ItemContent, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+            var dataPath = Application.dataPath;
+            var targetFilePath = Path.Combine(dataPath, userinfo);
+
+            var directoryPath = Path.GetDirectoryName(targetFilePath);
+            if (Directory.Exists(directoryPath) == false)
+                Directory.CreateDirectory(directoryPath);
+
+            File.WriteAllText(targetFilePath, scoreJson);
+        }
+        IEnumerator LoadDataRoutine(string url)
+        {
+            var webRequest = UnityWebRequest.Get(url);
+            //Get download progress
+            var progress = webRequest.downloadProgress;
+            Debug.Log(progress);
+
+            yield return webRequest.SendWebRequest();
+
+            if (webRequest.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError(webRequest.error);
+            }
+            else
+            {
+                var downloadedText = webRequest.downloadHandler.text;
+                Items = JsonConvert.DeserializeObject<List<Item>>(downloadedText);
+                for (int numberofcurrentItems = 0 ; numberofcurrentItems < Items.Count ; numberofcurrentItems++) {
+                    foreach (var itemIcon in itemsIconJson) {
+                        if (itemIcon.itemName == Items[numberofcurrentItems].ItemName) {
+                            Items[numberofcurrentItems].Icon = itemIcon.icon;
+                        } 
+                    }
+                }
+            }
+            RefreshUI();
+        }
+         [ContextMenu(nameof(LoadScoreFromGoogleDrive))]
+        void LoadScoreFromGoogleDrive()
+        {
+            StartCoroutine(LoadDataRoutine(loadinfo));
+        }
     }
 }
