@@ -32,9 +32,11 @@ public class CloseShopButton : MonoBehaviour
             NewCanvasUI.SetActive(false);
             OldCanvasUI.SetActive(false);
             Scrollbar.SetActive(false);
+            
             Text.SetActive(true);
             
             CloseShopActive = true;
+
             Debug.Log("Off");
         } 
         else if (CloseShopActive == true) {
@@ -95,4 +97,5 @@ public class CloseShopButton : MonoBehaviour
     {
         StartCoroutine(UnHide());
     }
+    
 }

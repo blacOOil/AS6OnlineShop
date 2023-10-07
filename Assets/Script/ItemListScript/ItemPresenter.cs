@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using UnityEngine.Networking;
 using TMPro;
 using System.IO;
+using DG.Tweening;
 
 
 namespace Inventory.ItemPresenter
@@ -119,6 +120,7 @@ namespace Inventory.ItemPresenter
             {
                 if (item.type == selectedCategory)
                 {
+
                     GameObject itemUi = Instantiate(ShopItemPrefab, ItemContent);
                     itemUi.GetComponentInChildren<Image>().sprite = item.Icon;
                     itemUi.GetComponentInChildren<TMP_Text>().text = item.ItemName;
