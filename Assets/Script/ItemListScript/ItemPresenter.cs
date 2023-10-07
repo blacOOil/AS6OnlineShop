@@ -124,6 +124,7 @@ namespace Inventory.ItemPresenter
                     GameObject itemUi = Instantiate(ShopItemPrefab, ItemContent);
                     itemUi.GetComponentInChildren<Image>().sprite = item.Icon;
                     itemUi.GetComponentInChildren<TMP_Text>().text = item.ItemName;
+                  
                     
                 }
             }
